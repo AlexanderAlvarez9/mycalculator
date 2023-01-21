@@ -1,4 +1,4 @@
-package mycalculator
+package myCalculator
 
 import "fmt"
 
@@ -26,8 +26,8 @@ func (calc) operate(inputsValue [2]int, operator string) {
 	}
 }
 
-// GetData get data from user
-func GetData() (int, int, string) {
+// getData get data from user
+func getData() (int, int, string) {
 	var firstNumber, secondNumber int
 	var operator string
 
@@ -44,7 +44,7 @@ func GetData() (int, int, string) {
 
 func Calculator() {
 	print("Welcome to goCalc\n")
-	v1, v2, op := GetData()
+	v1, v2, op := getData()
 	c := calc{}
 	values := [2]int{v1, v2}
 	c.operate(values, op)
