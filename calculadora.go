@@ -27,7 +27,7 @@ func (calc) operate(inputsValue [2]int, operator string) {
 }
 
 // GetData get data from user
-func getData() (int, int, string) {
+func GetData() (int, int, string) {
 	var firstNumber, secondNumber int
 	var operator string
 
@@ -42,14 +42,14 @@ func getData() (int, int, string) {
 	return firstNumber, secondNumber, operator
 }
 
-func calculator() {
+func Calculator() {
 	print("Welcome to goCalc\n")
-	v1, v2, op := getData()
+	v1, v2, op := GetData()
 	c := calc{}
 	values := [2]int{v1, v2}
 	c.operate(values, op)
 }
 
 func main() {
-	calculator()
+	Calculator()
 }
